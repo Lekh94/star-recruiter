@@ -1,0 +1,23 @@
+<div class="container-fluid p-0">
+    <div class="row no-gutters h-100vh">
+        <div class="col-md-9">
+            <h5 class="px-3 border-bottom pb-3 mt-3 mb-0">
+                Reports
+            </h5>
+            <div class="p-4 border m-3 theme-border">
+                <timeline></timeline>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="sidebar h-100 p-3">
+                <ul class="list-unstyled m-0 p-0 sidebar-nav mt-4">
+                    <li *ngFor="let user of candidates; index as i">
+                        <a class="d-block mb-2"
+                            [routerLink]="['/administration/jobs',jobId,'reports',i,'timeline']"
+                            routerLinkActive="active">{{user.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

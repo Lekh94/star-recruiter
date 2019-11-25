@@ -1,0 +1,23 @@
+.nav-tabs.hiringTabs{
+    border-color: #aecbdd !important;
+    .nav-link{
+        text-transform: none;
+        font-weight: normal;
+        border-bottom: none;
+        border-right: 1px solid #aecbdd;
+        padding:4px;
+        width: 150px;
+        text-align: center;
+        i{
+            font-size: 70%;
+            vertical-align: 1px
+        }
+        &.active{
+            background: rgba(174, 203, 221, 0.4);
+            border-right: 1px solid #aecbdd;
+        }
+        &.active i{
+            transform: rotate(90deg);
+        }
+    }
+}

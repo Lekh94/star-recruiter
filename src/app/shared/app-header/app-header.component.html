@@ -1,0 +1,42 @@
+<header>
+    <div class="container-fluid pt-4">
+        <div class="header justify-content-between d-flex mb-3">
+            <div>
+                <div *ngIf="!showLogo">
+                    <a class="light-blue-text" [routerLink]="['/']"> <i class="fa fa-long-arrow-left mr-1"></i> Return
+                        to Dashboard</a>
+                    <h1 class="text-white h5 mb-0 mt-2">Job Name</h1>
+                </div>
+                <a *ngIf="showLogo" href="#"><img src="assets/images/logo.png" /></a>
+            </div>
+            <a nz-dropdown nz-button nzType="primary" class="btn-light text-white rounded-0 px-3"
+                [nzDropdownMenu]="menu" nzTrigger="click">Aashish Dhawan <i class="align-middle" nz-icon
+                    nzType="down"></i></a>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+                <ul nz-menu>
+                    <li nz-menu-item>1st menu item</li>
+                    <li nz-menu-item>2nd menu item</li>
+                    <li nz-menu-item>3rd menu item</li>
+                    <li (click)="logout()" nz-menu-item>Logout</li>
+                </ul>
+            </nz-dropdown-menu>
+        </div>
+        <nav>
+            <ul class="list-unstyled justify-content-between d-flex m-0">
+                <li *ngIf="showLogo">
+                    <a class="text-white text-uppercase" [routerLinkActiveOptions]="{exact:
+                        true}" routerLinkActive="active" [routerLink]="['/']">Dashboard</a>
+                </li>
+                <li *ngIf="!showLogo">
+                    <a class="light-blue-text text-uppercase mr-3"
+                        [routerLink]="['/administration/jobs',jobId,menu.slug]" routerLinkActive="active"
+                        *ngFor="let menu of jobMenus">{{menu.label}}</a>
+                </li>
+                <li>
+                    <a class="text-white text-uppercase" routerLinkActive="active"
+                        [routerLink]="['/administration']">Administration</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,21 @@
+<div class="container-fluid p-0">
+    <div class="row no-gutters h-100vh">
+        <div class="col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-md-3">
+            <div class="sidebar h-100 p-3">
+               
+                <p class="mt-3 mb-4">Manage projects, users and global settings.</p>
+
+                <ul class="list-unstyled m-0 p-0 sidebar-nav">
+                    <li *ngFor="let nav of sidebarNavs">
+                        <a class="font-semi-bold d-block mb-2" 
+                        [routerLink]="nav.link" 
+                        routerLinkActive="active">{{nav.label}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

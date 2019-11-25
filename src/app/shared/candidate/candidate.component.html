@@ -1,0 +1,203 @@
+<div class="my-4">
+    <div class="row">
+        <div class="col-md-9 candidate-data pr-md-0">
+            <div class="border theme-border">
+                <ng-container [ngSwitch]="true">
+                    <ng-container *ngSwitchCase="tab === 'resume-screens'">
+                        <div class="px-3 pt-3 pb-0">
+                            <candidate-profile [activeTab]="tab"></candidate-profile>
+                            <ul class="nav nav-tabs border-0 m-0 mt-3" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab"
+                                        aria-selected="true">Timeline</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#resume" role="tab">Resume</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#notes" role="tab">Notes</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content bg-white p-3 border-top theme-border" id="myTabContent">
+                            <div class="tab-pane fade show active" id="timeline" role="tabpanel">
+                                <timeline></timeline>
+                            </div>
+                            <div class="tab-pane fade" id="resume" role="tabpanel">
+                                <div class="p-5 text-center mx-auto w-75">
+                                    <i nz-icon nzType="file-text" class="align-middle d-block h1 mb-3 theme-color"></i>
+                                    <button nz-button nzType="primary"
+                                        class="font-semi-bold light-blue py-1 h-auto px-3">
+                                        Load Resume</button>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="notes" role="tabpanel">
+                                Notes
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="tab === 'telephonic-screens'">
+                        <div class="px-3 pt-3 pb-0">
+                            <candidate-profile [activeTab]="tab"></candidate-profile>
+                            <ul class="nav nav-tabs border-0 m-0 mt-3" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#timeline2" role="tab"
+                                        aria-selected="true">Timeline</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#resume2" role="tab">Resume</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#notes2" role="tab">Notes</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content bg-white p-3 border-top theme-border" id="myTabContent">
+                            <div class="tab-pane fade show active" id="timeline2" role="tabpanel">
+                                <timeline></timeline>
+                            </div>
+                            <div class="tab-pane fade" id="resume2" role="tabpanel">
+                                <div class="p-5 text-center mx-auto w-75">
+                                    <i nz-icon nzType="file-text" class="align-middle d-block h1 mb-3 theme-color"></i>
+                                    <button nz-button nzType="primary"
+                                        class="font-semi-bold light-blue py-1 h-auto px-3">
+                                        Load Resume</button>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="notes2" role="tabpanel">
+                                Notes
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="tab === 'interviews'">
+                        <div class="px-3 pt-3 pb-0">
+                            <candidate-profile [activeTab]="tab"></candidate-profile>
+                        </div>
+                        <div class="bg-white p-3 border-top theme-border mt-3">
+                            cv......
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+        <div class="col-md-3 pb-md-5 pl-md-0 ml-auto">
+            <div class="sidebar h-100 p-3 border theme-border">
+                <ng-container [ngSwitch]="true">
+                    <ng-container *ngSwitchCase="tab === 'resume-screens'">
+                        <h6 class="section-title theme-color">Scheduled next Steps</h6>
+                        <div class="form-group">
+                            <label class="radioButton cursor-pointer"><input type="radio" name="interview"
+                                    class="d-none"><i></i> Face to face
+                                interview</label>
+                            <input type="text" class="form-control" placeholder="Date & Time">
+                        </div>
+                        <div class="form-group">
+                            <label class="radioButton cursor-pointer"><input type="radio" name="interview"
+                                    class="d-none"><i></i> Telephonic
+                                interview</label>
+                            <input type="text" class="form-control" placeholder="Date & Time">
+                        </div>
+                        <h6 class="section-title theme-color pt-3">Reject Candidate</h6>
+                        <div class="form-group">
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Not
+                                Reachable</label>
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Not looking
+                                for job change</label>
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Out of
+                                budget</label>
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Not
+                                Intrested</label>
+                        </div>
+                        <h6 class="section-title theme-color pt-3">Note</h6>
+                        <div class="form-group">
+                            <textarea class="form-control"></textarea>
+                        </div>
+                        <button nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
+                            Save & Next</button>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="tab === 'telephonic-screens'">
+                        <h6 class="section-title theme-color">Scheduled interview</h6>
+                        <div class="form-group">
+                            <label class="radioButton cursor-pointer"><input type="radio" name="interview"
+                                    class="d-none"><i></i> Face to face
+                                interview</label>
+                            <input type="text" class="form-control" placeholder="Date & Time">
+                        </div>
+                        <div class="form-group">
+                            <label class="radioButton cursor-pointer"><input type="radio" name="interview"
+                                    class="d-none"><i></i> Telephonic interview
+                                interview</label>
+                            <input type="text" class="form-control" placeholder="Date & Time">
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox cursor-pointer"><input type="checkbox"><i
+                                    class="bg-white align-middle mr-1"></i> Notify Candidate</label>
+                        </div>
+                        <h6 class="section-title theme-color pt-3">Reject Candidate</h6>
+                        <div class="form-group">
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Not
+                                Interested</label>
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Not looking
+                                for job change</label>
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Out of
+                                budget</label>
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Location is not suitable</label>
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Already Interviewed</label>
+                        </div>
+                        <h6 class="section-title theme-color pt-3">Visit later</h6>
+                        <div class="form-group">
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="visit" class="d-none"><i></i> Phone not reachable</label>
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="visit" class="d-none"><i></i> Call later</label>
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="visit" class="d-none"><i></i> Wrong number</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox cursor-pointer"><input type="checkbox"><i
+                                    class="bg-white align-middle mr-1"></i> Notify Candidate</label>
+                        </div>
+                        <button nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
+                            Save & Next</button>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="tab === 'interviews'">
+                        <h6 class="section-title theme-color">Reject Candidate</h6>
+                        <div class="form-group">
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Poor Skills</label>
+                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                                    name="reject" class="d-none"><i></i> Poor Attitude</label>
+                        </div>
+                        <h6 class="section-title theme-color pt-3">Reject Reason</h6>
+                        <div class="form-group">
+                            <textarea class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox cursor-pointer"><input type="checkbox"><i
+                                    class="bg-white align-middle mr-1"></i> Notify Candidate</label>
+                        </div>
+                        <div class="form-group mb-5">
+                            <label>Select time to send the Rejection email.</label>
+                            <select class="form-control"></select>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox cursor-pointer"><input type="checkbox"><i
+                                    class="bg-white align-middle mr-1"></i> Move to next round</label>
+                        </div>
+                        <button nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
+                            Finish Interview</button>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

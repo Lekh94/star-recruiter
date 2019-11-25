@@ -1,0 +1,24 @@
+.timeline{
+    .row > div:first-child::before,
+    .row > div:first-child::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -15px;
+        bottom: -15px;
+        right: 15px;
+        width: 1px;
+        background: #b0c9df;
+    }
+    .row > div:first-child::after{
+        height: 16px;
+        width: 16px;
+        border-radius: 100%;
+        top: 4px;
+        bottom: auto;
+        margin: auto;
+        border: 4px solid #fff;
+        box-shadow: 0px 0px 0px 1px #b0c9df;
+        right: 7px;
+    }
+}
