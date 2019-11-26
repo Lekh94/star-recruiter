@@ -28,25 +28,15 @@ export class CandidatesListComponent implements OnInit {
         let data = Candidates;
         let neData = []
         data.map((data) => {
-            let obj = [data.name, data.email, data.phone, data.skills, data.role] 
-            //, phone: data.phone, skills: data.skills, source: data.role }
-            neData.push(obj)
+            let obj = [data.name, data.email, data.phone, data.skills, data.role];
+            neData.push(obj);
         })
-        let obj = ['', 'Name', 'Email Address', 'Phone', 'Skills', 'Source']
-        // {name: 'Name', email: 'Email Address', phone: 'Phone', skills: 'Skills', source: 'Rating' }
-        //['Name', 'Email Address', 'Phone', 'Skills', 'Source']
-       
-        neData.unshift(obj)
-        console.log('neData', neData)
         let table = document.getElementById('table-data');
         new Handsontable(table, {
             data: neData,
-            colWidths: 100,
-            width: '100%',
-            height: 320,
-            rowHeights: 23,
+            stretchH: 'all',
             rowHeaders: true,
-            colHeaders: true
+            colHeaders: ['Name', 'Email Address', 'Phone', 'Skills', 'Source'],
         })
     }
 

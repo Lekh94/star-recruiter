@@ -8,14 +8,15 @@
         </thead>
         <tbody class="bg-white">
             <tr *ngFor="let row of candidates">
-                <td *ngFor="let col of tableColumn" class="">
+                <td *ngFor="let col of tableColumn">
                     <label *ngIf="col.slug == 'name' && (tableHeader == 'candidates' || tableHeader == 'talentPool')"
                         class="text-light-blue checkbox cursor-pointer"><input type="checkbox"><i
                             class="mr-2 align-middle"></i>
                         {{row[col.slug]}}
                     </label>
-                    <span class="text-light-blue" *ngIf="col.slug == 'name' && (tableHeader != 'candidates' && tableHeader != 'talentPool')">
+                    <span class="text-light-blue" *ngIf="col.slug == 'name' && (tableHeader != 'candidates' && tableHeader != 'talentPool' && tableHeader != 'reports')">
                         {{row[col.slug]}}</span>
+                    <a *ngIf="col.slug == 'name' && tableHeader === 'reports'" [routerLink]="[row.id,'timeline']">{{row[col.slug]}}</a>
                     <span *ngIf="col.slug != 'name'">
                         {{col.slug === 'rating' ? '' : row[col.slug]}}
                         <span *ngIf="col.slug === 'rating'">

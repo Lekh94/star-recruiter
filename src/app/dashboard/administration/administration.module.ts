@@ -13,13 +13,29 @@ const route: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: 'jobs',
+                redirectTo: 'overview',
                 pathMatch: 'full',
-                loadChildren: () => import('./jobs/jobs.module').then(m => m.JobsModule)
+                loadChildren: () => import('./overview/overview.module').then(mod => mod.OverviewComponentModule)
             },
             {
                 path: 'jobs',
                 loadChildren: () => import('./jobs/jobs.module').then(m => m.JobsModule)
+            },
+            {
+                path: 'overview',
+                loadChildren: () => import('./overview/overview.module').then(mod => mod.OverviewComponentModule)
+            },
+            {
+                path: 'users-roles',
+                loadChildren: () => import('./users-roles/users-roles.module').then(mod => mod.UsersAndRolesModule)
+            },
+            {
+                path: 'customizations',
+                loadChildren: () => import('./customizations/customizations.module').then(mod => mod.CustomizationsModule)
+            },
+            {
+                path: 'settings',
+                loadChildren: () => import('./settings/settings.module').then(mod => mod.SettingsModule)
             }
         ]
     }

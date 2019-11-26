@@ -32,7 +32,7 @@ hr{
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,
 .font-semi-bold{
-    font-weight: 600
+    font-weight: 600 !important
 }
 .form-control{
     box-shadow: none !important
@@ -124,14 +124,13 @@ input:-webkit-autofill:active  {
         position: relative;
         &:before{
             content: "";
-            top: -15px;
-            bottom: 0;
-            width: 3px;
+            top: 0px;
+            width: 1px;
             background: #afcadf;
-            transition: all ease-in -out 0.4s;
+            transition: all ease-in 0.4s;
             display: block;
             position: absolute;
-            left: -16px;
+            left: -18px;
             height: 25px;
             opacity: 0;
         }
@@ -139,8 +138,9 @@ input:-webkit-autofill:active  {
     .sidebar-nav a.active{
         color: #000;
         &:before{
-            top: 0;
+            width: 3px;
             opacity: 1;
+            left: -16px;
         }
     }
 }
@@ -221,6 +221,23 @@ table {
     padding-top: 1px !important;
     padding-bottom: 1px !important;
 }
+.light-blue.sm-btn{
+    height: auto;
+    padding: 6px;
+    font-size: 12px
+}
+.light-blue.sm-btn i{
+    font-size: 11px;
+}
+h1.text-error.font-weight-bold {
+    font-size: 54px;
+    i{
+        font-size: 70%;
+        vertical-align: 8px;
+    }
+}
+
+
 @media (min-width: 768px){
     .col-md-9.candidate-data {
         flex: 0 0 73.5%;

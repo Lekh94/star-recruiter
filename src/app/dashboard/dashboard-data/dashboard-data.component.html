@@ -2,7 +2,8 @@
     <div class="row no-gutters h-100vh">
         <div class="col-md-9">
             <h5 class="px-3 d-flex border-bottom pb-3 justify-content-between mt-3 mb-0">
-                <div>Hiring Trend <small>(last <a (click)="showTimeFrame()" class="text-light-blue">14 months</a> )</small></div>
+                <div>Hiring Trend <small>(last <a (click)="showTimeFrame()" class="text-light-blue">14 months</a>
+                        )</small></div>
                 <small>Top Resume Source</small>
             </h5>
             <plotly-plot [data]="graph.data" [layout]="graph.layout"></plotly-plot>
@@ -14,7 +15,8 @@
                             <span>
                                 <i nz-icon nzType="eye-invisible" class="text-muted"></i>
                                 <i class="mx-2" nz-icon nzType="idcard"></i>
-                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">IOS Developer</a>
+                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">IOS
+                                    Developer</a>
                             </span>
                             <span>
                                 Opening: <span class="text-light-blue">5</span>,
@@ -27,7 +29,8 @@
                             <span>
                                 <i nz-icon nzType="eye-invisible" class="text-muted"></i>
                                 <i class="mx-2" nz-icon nzType="idcard"></i>
-                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">Full Stack Developer</a>
+                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">Full
+                                    Stack Developer</a>
                             </span>
                             <span>
                                 Opening: <span class="text-light-blue">5</span>,
@@ -40,7 +43,8 @@
                             <span>
                                 <i nz-icon nzType="eye-invisible" class="text-muted"></i>
                                 <i class="mx-2" nz-icon nzType="idcard"></i>
-                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">Android Developer</a>
+                                <a [routerLink]="['/administration/jobs/',2]"
+                                    class="text-light-blue align-middle">Android Developer</a>
                             </span>
                             <span>
                                 Opening: <span class="text-light-blue">5</span>,
@@ -53,7 +57,8 @@
                             <span>
                                 <i nz-icon nzType="eye-invisible" class="text-muted"></i>
                                 <i class="mx-2" nz-icon nzType="idcard"></i>
-                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">Angular Developer</a>
+                                <a [routerLink]="['/administration/jobs/',2]"
+                                    class="text-light-blue align-middle">Angular Developer</a>
                             </span>
                             <span>
                                 Opening: <span class="text-light-blue">5</span>,
@@ -66,7 +71,8 @@
                             <span>
                                 <i nz-icon nzType="eye-invisible" class="text-muted"></i>
                                 <i class="mx-2" nz-icon nzType="idcard"></i>
-                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">IOS Developer</a>
+                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">IOS
+                                    Developer</a>
                             </span>
                             <span>
                                 Opening: <span class="text-light-blue">5</span>,
@@ -79,7 +85,8 @@
                             <span>
                                 <i nz-icon nzType="eye-invisible" class="text-muted"></i>
                                 <i class="mx-2" nz-icon nzType="idcard"></i>
-                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">Full Stack Developer</a>
+                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">Full
+                                    Stack Developer</a>
                             </span>
                             <span>
                                 Opening: <span class="text-light-blue">5</span>,
@@ -92,7 +99,8 @@
                             <span>
                                 <i nz-icon nzType="eye-invisible" class="text-muted"></i>
                                 <i class="mx-2" nz-icon nzType="idcard"></i>
-                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">Android Developer</a>
+                                <a [routerLink]="['/administration/jobs/',2]"
+                                    class="text-light-blue align-middle">Android Developer</a>
                             </span>
                             <span>
                                 Opening: <span class="text-light-blue">5</span>,
@@ -105,7 +113,8 @@
                             <span>
                                 <i nz-icon nzType="eye-invisible" class="text-muted"></i>
                                 <i class="mx-2" nz-icon nzType="idcard"></i>
-                                <a [routerLink]="['/administration/jobs/',2]" class="text-light-blue align-middle">Angular Developer</a>
+                                <a [routerLink]="['/administration/jobs/',2]"
+                                    class="text-light-blue align-middle">Angular Developer</a>
                             </span>
                             <span>
                                 Opening: <span class="text-light-blue">5</span>,
@@ -118,8 +127,10 @@
         </div>
         <div class="col-md-3">
             <div class="sidebar h-100 p-3">
-                <button (click)="addJob()" nz-button nzType="primary" class="font-semi-bold light-blue px-3">
-                    <i class="mr-1" nz-icon nzType="plus"></i> Add New Job</button>
+                <button [routerLink]="['/administration/jobs/profiles/add-profile']" nz-button nzType="primary" class="font-semi-bold light-blue sm-btn">
+                    <i class="align-middle" nz-icon nzType="plus"></i> Add New Job Profile</button>
+                <button [routerLink]="['/administration/jobs/openings/add-opening']"  nz-button nzType="primary" class="ml-2 font-semi-bold light-blue sm-btn">
+                    <i class="align-middle" nz-icon nzType="plus"></i> Add New Job Opening</button>
                 <p class="mt-3 mb-2">You have 3 outstanding offers</p>
                 <h6 class="section-title theme-color">Extended Offers</h6>
 

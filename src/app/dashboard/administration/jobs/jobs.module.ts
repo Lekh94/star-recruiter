@@ -14,11 +14,20 @@ const route: Routes = [
         children: [
             {
                 path: '',
-                loadChildren: () => import('./job-list/job-list.module').then(mod => mod.JobListModule)
+                redirectTo: 'profiles',
+                loadChildren: () => import('./profiles/profiles.module').then(mod => mod.JobProfilesModule)
             },
             {
-                path: 'add-job',
-                loadChildren: () => import('./add-job/add-job.module').then(mod => mod.AddJobModule)
+                path: 'openings',
+                loadChildren: () => import('./openings/openings.module').then(mod => mod.JobOpeningsModule)
+            },
+            {
+                path: 'profiles',
+                loadChildren: () => import('./profiles/profiles.module').then(mod => mod.JobProfilesModule)
+            },
+            {
+                path: 'access',
+                loadChildren: () => import('./access/access.module').then(mod => mod.JobAccessModule)
             }
         ]
     }

@@ -1,0 +1,33 @@
+<ul class="list-unstyled job-listing">
+    <li class="row py-2 bg-light align-items-center">
+        <div class="col-md-2">
+            Role
+        </div>
+        <div class="col-md-2 ml-4">
+            User
+        </div>
+        <div class="ml-auto pr-3">Action</div>
+    </li>
+    <li *ngFor="let job of data" class="row align-items-center py-2 border-bottom bg-white">
+        <div class="col-md-2">
+            <select name="" class="text-light-blue form-control border-0 p-0 h-auto">
+                <option *ngFor="let role of data">{{role}}</option>
+            </select>
+        </div>
+        <div class="col-md-2 ml-4">
+            <select name="" class="form-control border-0 p-0 h-auto">
+                <option value="">User Name</option>
+                <option value="">User Name 2</option>
+            </select>
+        </div>
+        <div class="ml-auto pr-3">
+            <i class="ml-2 text-error cursor-pointer" nz-icon nzType="close-circle"></i>
+        </div>
+    </li>
+</ul>
+<div class="row">
+    <div class="col-md-12 pl-0">
+        <button nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
+            <i class="" nz-icon nzType="plus"></i>Add Permissions</button>
+    </div>
+</div>

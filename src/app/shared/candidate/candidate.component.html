@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="notes" role="tabpanel">
-                                Notes
+                                <notes></notes>
                             </div>
                         </div>
                     </ng-container>
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="notes2" role="tabpanel">
-                                Notes
+                                <notes></notes>
                             </div>
                         </div>
                     </ng-container>
@@ -86,29 +86,29 @@
                     <ng-container *ngSwitchCase="tab === 'resume-screens'">
                         <h6 class="section-title theme-color">Scheduled next Steps</h6>
                         <div class="form-group">
-                            <label class="radioButton cursor-pointer"><input type="radio" name="interview"
+                            <label class="radioButton cursor-pointer font-semi-bold"><input type="radio" name="interview"
                                     class="d-none"><i></i> Face to face
                                 interview</label>
                             <input type="text" class="form-control" placeholder="Date & Time">
                         </div>
                         <div class="form-group">
-                            <label class="radioButton cursor-pointer"><input type="radio" name="interview"
+                            <label class="radioButton cursor-pointer font-semi-bold"><input type="radio" name="interview"
                                     class="d-none"><i></i> Telephonic
                                 interview</label>
                             <input type="text" class="form-control" placeholder="Date & Time">
                         </div>
                         <h6 class="section-title theme-color pt-3">Reject Candidate</h6>
                         <div class="form-group">
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Not
                                 Reachable</label>
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Not looking
                                 for job change</label>
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Out of
                                 budget</label>
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Not
                                 Intrested</label>
                         </div>
@@ -122,15 +122,14 @@
                     <ng-container *ngSwitchCase="tab === 'telephonic-screens'">
                         <h6 class="section-title theme-color">Scheduled interview</h6>
                         <div class="form-group">
-                            <label class="radioButton cursor-pointer"><input type="radio" name="interview"
+                            <label class="radioButton cursor-pointer font-semi-bold"><input type="radio" name="interview"
                                     class="d-none"><i></i> Face to face
                                 interview</label>
                             <input type="text" class="form-control" placeholder="Date & Time">
                         </div>
                         <div class="form-group">
-                            <label class="radioButton cursor-pointer"><input type="radio" name="interview"
-                                    class="d-none"><i></i> Telephonic interview
-                                interview</label>
+                            <label class="radioButton cursor-pointer font-semi-bold"><input type="radio" name="interview"
+                                    class="d-none"><i></i> Telephonic interview</label>
                             <input type="text" class="form-control" placeholder="Date & Time">
                         </div>
                         <div class="form-group">
@@ -139,27 +138,27 @@
                         </div>
                         <h6 class="section-title theme-color pt-3">Reject Candidate</h6>
                         <div class="form-group">
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Not
                                 Interested</label>
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Not looking
                                 for job change</label>
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Out of
                                 budget</label>
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Location is not suitable</label>
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Already Interviewed</label>
                         </div>
                         <h6 class="section-title theme-color pt-3">Visit later</h6>
                         <div class="form-group">
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="visit" class="d-none"><i></i> Phone not reachable</label>
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="visit" class="d-none"><i></i> Call later</label>
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="visit" class="d-none"><i></i> Wrong number</label>
                         </div>
                         <div class="form-group">
@@ -172,9 +171,9 @@
                     <ng-container *ngSwitchCase="tab === 'interviews'">
                         <h6 class="section-title theme-color">Reject Candidate</h6>
                         <div class="form-group">
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Poor Skills</label>
-                            <label class="radioButton cursor-pointer mb-2 d-block position-relative"><input type="radio"
+                            <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input type="radio"
                                     name="reject" class="d-none"><i></i> Poor Attitude</label>
                         </div>
                         <h6 class="section-title theme-color pt-3">Reject Reason</h6>

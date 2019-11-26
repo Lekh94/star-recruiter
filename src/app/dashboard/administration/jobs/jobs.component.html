@@ -4,50 +4,16 @@
 <div class="container-fluid">
     <ul class="nav nav-tabs border-0 ml-3" id="myTab" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#jobs" role="tab" aria-selected="true">Jobs</a>
+            <a class="nav-link" [routerLink]="['/administration/jobs/profiles']" routerLinkActive="active">Job Profiles</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#access" role="tab" aria-selected="false">Access</a>
+            <a class="nav-link" [routerLink]="['/administration/jobs/openings']" routerLinkActive="active">Job Openings</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/administration/jobs/access']" routerLinkActive="active">Access</a>
         </li>
     </ul>
     <div class="tab-content border" id="myTabContent">
-        <div class="tab-pane fade show active" id="jobs" role="tabpanel">
-            <router-outlet></router-outlet>
-        </div>
-        <div class="tab-pane fade" id="access" role="tabpanel">
-            <ul class="list-unstyled job-listing">
-                <li class="row py-2 bg-light align-items-center">
-                    <div class="col-md-2">
-                        Role
-                    </div>
-                    <div class="col-md-2 ml-4">
-                        User
-                    </div>
-                    <div class="ml-auto pr-3">Action</div>
-                </li>
-                <li *ngFor="let job of data" class="row align-items-center py-2 border-bottom bg-white">
-                    <div class="col-md-2">
-                        <select name="" class="text-light-blue form-control border-0 p-0 h-auto">
-                            <option *ngFor="let role of data">{{role}}</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2 ml-4">
-                        <select name="" class="form-control border-0 p-0 h-auto">
-                            <option value="">User Name</option>
-                            <option value="">User Name 2</option>
-                        </select>
-                    </div>
-                    <div class="ml-auto pr-3">
-                        <i class="ml-2 text-error cursor-pointer" nz-icon nzType="close-circle"></i>
-                    </div>
-                </li>
-            </ul>
-            <div class="row">
-                <div class="col-md-12 pl-0">
-                    <button nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
-                        <i class="" nz-icon nzType="plus"></i>Add Permissions</button>
-                </div>
-            </div>
-        </div>
+        <router-outlet></router-outlet>
     </div>
 </div>

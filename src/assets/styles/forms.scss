@@ -113,3 +113,13 @@ textarea.form-control{
 .form-control.ng-invalid.ng-touched {
     border-color: rgba(228, 3, 72, 0.47) !important;
 }
+select.form-control{
+    appearance: none;
+    background:#fff url('./assets/images/drop-down.png') no-repeat 98% 10px;
+    padding-right: 20px;
+}
+select.form-control.border-0{
+    width: auto;
+    padding-left: 0;
+    background-position-y: 12px;
+}

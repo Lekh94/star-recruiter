@@ -1,16 +1,15 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HotTableModule } from '@handsontable/angular';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-import { AddJobComponent } from './add-job.component';
+import { JobTimelineComponent } from './job-timeline.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 const route: Routes = [
     {
         path: '',
-        component: AddJobComponent
+        component: JobTimelineComponent        
     }
 ]
 
@@ -18,11 +17,10 @@ const route: Routes = [
     imports: [
         CommonModule,
         RouterModule.forChild(route),
-        HotTableModule,
         NzIconModule,
-        NzButtonModule
+        SharedModule
     ],
-    declarations: [AddJobComponent]
+    declarations: [JobTimelineComponent]
 })
 
-export class AddJobModule { }
+export class JobTimelineModule { }

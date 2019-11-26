@@ -18,9 +18,11 @@ export class AppHeaderComponent implements OnInit {
     constructor(private route: Router,
         private dataService: DataService) { }
 
-    ngOnInit() {
-        this.jobId = this.route.url.split('/')[3];
-        this.dataService.logo.subscribe((response: any) => this.showLogo = response);
+    ngOnInit() {       
+        this.dataService.logo.subscribe((response: any) => {
+            this.showLogo = response;
+            this.jobId = this.route.url.split('/')[3];
+        });
     }
 
     logout() {

@@ -1,0 +1,21 @@
+<div>
+    <ul class="list-unstyled job-listing">
+        <li class="row bg-light py-2">
+            <div class="col-md-6">Job</div>
+            <div class="ml-auto pr-3">Action</div>
+        </li>
+        <li *ngFor="let job of data" class="bg-white py-2 row border-bottom">
+            <div class="col-md-6"> <a [routerLink]="['/administration/jobs/',job[0]]">{{job[1]}}</a></div>
+            <div class="ml-auto pr-3">
+                <i class="cursor-pointer" nz-icon nzType="edit"></i>
+                <i class="ml-2 text-error cursor-pointer" nz-icon nzType="close-circle"></i>
+            </div>
+        </li>
+    </ul>
+    <div class="row">
+        <div class="col-md-12 pl-0">
+            <button [routerLink]="['add-opening']" nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
+                <i class="" nz-icon nzType="plus"></i>Add Job Opening</button>
+        </div>
+    </div>
+</div>

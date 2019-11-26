@@ -1,0 +1,54 @@
+<div class="responsive-table">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Email Address</th>
+                <th>Status</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white">
+            <tr>
+                <td>
+                    <label class="text-light-blue checkbox cursor-pointer">
+                        <input type="checkbox"><i class="mr-2 align-middle"></i>
+                        User Name 1
+                    </label>
+                </td>
+                <td>info@abc.com</td>
+                <td>
+                    <select class="form-control border-0">
+                        <option value="">Active</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="form-control border-0">
+                        <option value="">Admin</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="text-light-blue checkbox cursor-pointer">
+                        <input type="checkbox"><i class="mr-2 align-middle"></i>
+                        User Name 2
+                    </label>
+                </td>
+                <td>info@abc.com</td>
+                <td>
+                    <select class="form-control border-0">
+                        <option value="">Active</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="form-control border-0">
+                        <option value="">Admin</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button [routerLink]="['add-user']" nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
+    <i class="" nz-icon nzType="plus"></i>Add User</button>

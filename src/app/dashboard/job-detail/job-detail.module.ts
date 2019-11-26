@@ -41,6 +41,14 @@ const route: Routes = [
             {
                 path: 'candidates',
                 loadChildren: () => import('./candidates/candidates.module').then(mod => mod.CandidatesModule)
+            },
+            {
+                path: 'import',
+                loadChildren: () => import('./import/import.module').then(mod => mod.ImportFileModule)
+            },
+            {
+                path: 'timeline',
+                loadChildren: () => import('./timeline/job-timeline.module').then(mod => mod.JobTimelineModule)
             }
         ]
     }

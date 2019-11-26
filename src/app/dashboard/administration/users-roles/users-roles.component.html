@@ -1,0 +1,16 @@
+<h5 class="px-3 border-bottom pb-3 mt-3 mb-0">
+    Users & Roles
+</h5>
+<div class="container-fluid">
+    <ul class="nav nav-tabs border-0 ml-3" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/administration/users-roles/users']" routerLinkActive="active">Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/administration/users-roles/access']" routerLinkActive="active">Access</a>
+        </li>
+    </ul>
+    <div class="border p-3 theme-border">
+        <router-outlet></router-outlet>
+    </div>
+</div>

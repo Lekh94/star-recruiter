@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 import { HotTableModule } from '@handsontable/angular';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { JobListComponent } from './job-list.component';
+import { AddJobOpeningComponent } from './add-job-opening.component';
 
 
 const route: Routes = [
     {
         path: '',
-        component: JobListComponent
+        component: AddJobOpeningComponent
     }
 ]
 
@@ -22,7 +22,7 @@ const route: Routes = [
         NzIconModule,
         NzButtonModule
     ],
-    declarations: [JobListComponent]
+    declarations: [AddJobOpeningComponent]
 })
 
-export class JobListModule { }
+export class AddJobModule { }

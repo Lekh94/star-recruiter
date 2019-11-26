@@ -27,7 +27,12 @@ export class AddCandidateComponent implements OnInit {
             noticePeriod: [''],
             experience: ['', Validators.required],
             source: ['', Validators.required],
-            dob: ['', Validators.required]
+            dob: ['', Validators.required],
+            address: [''],
+            landmark: [''],
+            city: [''],
+            state: [''],
+            pinCode: [''],
         })
     }
 

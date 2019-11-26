@@ -6,6 +6,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { CandidateProfileComponent } from './candidate-profile/candidate-profile.component';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { CandidateComponent } from './candidate/candidate.component';
+import { RouterModule } from '@angular/router';
+import { NotesComponent } from './notes/notes.component';
 
 
 @NgModule({
@@ -13,18 +15,21 @@ import { CandidateComponent } from './candidate/candidate.component';
         CommonModule,
         NzButtonModule,
         NzIconModule,
+        RouterModule
     ],
     exports: [
         TableComponent,
         TimelineComponent,
         CandidateComponent,
-        CandidateProfileComponent
+        CandidateProfileComponent,
+        NotesComponent
     ],
     declarations: [
         TableComponent,
         TimelineComponent,
         CandidateComponent,
-        CandidateProfileComponent
+        CandidateProfileComponent,
+        NotesComponent
     ]
 })
 

@@ -2,11 +2,11 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'jobs-list',
-    templateUrl: './job-list.component.html'
+    selector: 'job-openings',
+    templateUrl: './openings.component.html'
 })
 
-export class JobListComponent implements OnInit {
+export class JobOpeningsComponent implements OnInit {
 
     constructor(private router: Router) { }
 
@@ -17,13 +17,5 @@ export class JobListComponent implements OnInit {
         ['15', 'Backend Developer']
     ];
 
-    ngOnInit() {
-        console.log('data',this.data)
-     }
-
-    
-   
-    addJob() {
-        this.router.navigateByUrl('/administration/jobs/add-job')
-    }
+    ngOnInit() { }
 }
