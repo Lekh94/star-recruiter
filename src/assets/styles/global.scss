@@ -236,8 +236,18 @@ h1.text-error.font-weight-bold {
         vertical-align: 8px;
     }
 }
-
-
+.dropdown-menu.skills{
+    min-width: 300px;
+}
+.selectedSkills span{
+    transform: translateY(-24px);
+    padding: 0px 6px !important;
+    font-size: 13px;
+    margin-left: 4px;
+}
+.form-control.skills[readonly]{
+    font-size: 0px;
+}
 @media (min-width: 768px){
     .col-md-9.candidate-data {
         flex: 0 0 73.5%;

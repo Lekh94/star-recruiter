@@ -1,6 +1,6 @@
 <section class="h-100vh d-flex align-items-center">
     <div class="container text-center">
-        <a href=""><img src="../../../assets/images/logo.png" /></a>
+        <a href=""><img src="assets/images/logo.png" /></a>
         <div class="card mt-4 sm-card p-3 rounded bg-white shadow-sm mx-auto">
             <h1 class="h4">StarRecuiter</h1>
             <h6 class="font-weight-normal mb-4">Log into Your Account</h6>
@@ -17,7 +17,7 @@
                 <div class="form-group position-relative">
                     <input nz-input type="email" formControlName="email"
                         pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                        class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" placeholder="" />
+                        class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
                     <label class="position-absolute">Email</label>
                     <div *ngIf="myForm.controls.email.touched && myForm.controls.email.invalid" class="error-msg mt-1">
                         <i nz-icon nzType="close-circle" nzTheme="outline" class="align-middle mr-1"></i> Email is
@@ -25,7 +25,7 @@
                 </div>
                 <div class="form-group position-relative">
                     <input nz-input type="password" formControlName="password"
-                        class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" placeholder="" />
+                        class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
                     <label class="position-absolute">Password</label>
                     <div *ngIf="myForm.controls.password.touched && myForm.controls.password.invalid"
                         class="error-msg mt-1">

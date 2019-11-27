@@ -11,6 +11,9 @@ export class AddCandidateComponent implements OnInit {
 
     candidateForm: FormGroup;
     isLoading: boolean;
+    skillList: any[] = ['Angular', 'Stack', 'Java', 'HTML', 'CSS', 'Java Script', 'Photoshop', 'Design', 'Development'];
+    selectedSkills: any[] = [];
+    filterSkills: any[] = [];
 
     constructor(private router: Router,
         private fb: FormBuilder) {
@@ -36,11 +39,47 @@ export class AddCandidateComponent implements OnInit {
         })
     }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.filterSkills = this.skillList;
+    }
 
     candidatesList() {
-        this.isLoading = true;
-        let url = this.router.url.replace('add', 'all');
-        this.router.navigateByUrl(url);
+        // this.isLoading = true;
+        // let url = this.router.url.replace('add', 'all');
+        // this.router.navigateByUrl(url);
+        console.log('this.candidateForm', this.candidateForm.value)
+    }
+
+    preventDefault(event) {
+        event.stopPropagation();
+    }
+
+    addSkills(event) {
+        let control = this.candidateForm.get('skills');
+        if (event.target.checked === true) this.selectedSkills.push(event.target.name);
+        else this.selectedSkills = this.selectedSkills.filter((data) => data != event.target.name);
+        control.setValue(this.selectedSkills);
+    }
+
+    removeSkill(skill) {
+        let control = this.candidateForm.get('skills');
+        this.selectedSkills = this.selectedSkills.filter((data) => data != skill);
+        control.setValue(this.selectedSkills);
+    }
+
+    hasSkill(skill) {
+        if (this.selectedSkills) return this.selectedSkills.find((data) => data === skill) ? true : false;
+    }
+
+    searchSkills(event) {
+        let searchData = this.filterSkills;
+        let search = event.target.value;
+        search = search.toLowerCase();
+        if (search) {
+            searchData = searchData.filter((data) => {
+                return data.toLowerCase().trim().indexOf(search) != -1;
+            });
+            this.skillList = searchData;
+        } else this.skillList = this.filterSkills;
     }
 }

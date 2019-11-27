@@ -71,14 +71,35 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="form-group">
+                                    <div class="form-group dropdown">
                                         <label class="font-semi-bold mb-0">Skills*</label>
-                                        <input type="text" class="form-control" formControlName="skills" />
+                                        <input data-toggle="dropdown" type="text" class="skills form-control bg-white"
+                                            formControlName="skills" readonly />
+                                        <ul class="dropdown-menu shadow-sm skills p-3">
+                                            <input (keyup)="searchSkills($event)" type="text"
+                                                placeholder="Search Skills" class="form-control mb-2">
+                                            <li *ngFor="let skill of skillList" (click)="preventDefault($event)">
+                                                <label class="checkbox cursor-pointer font-weight-normal"><input
+                                                        type="checkbox" name="{{skill}}" class="d-none"
+                                                        (change)="addSkills($event)" [checked]="hasSkill(skill)">
+                                                    <i class="d-inline-block border align-middle mr-1"></i>
+                                                    {{skill}}
+                                                </label>
+                                            </li>
+                                        </ul>
                                         <div *ngIf="candidateForm.controls.skills.touched && candidateForm.controls.skills.invalid"
                                             class="error-msg mt-1">
                                             <i nz-icon nzType="close-circle" nzTheme="outline"
                                                 class="align-middle mr-1"></i>
                                             Skills is required
+                                        </div>
+                                        <div class="selectedSkills">
+                                            <span class="d-inline-block border rounded bg-white p-1 px-2"
+                                                *ngFor="let skill of selectedSkills">
+                                                {{skill}}
+                                                <i class="align-middle ml-1 cursor-pointer" nz-icon
+                                                    nzType="close-circle" (click)="removeSkill(skill)"></i>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
