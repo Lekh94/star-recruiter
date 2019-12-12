@@ -2,21 +2,9 @@
 <div class="container-fluid px-5">
     <ul class="nav nav-tabs hiringTabs border rounded bg-white mb-3" role="tablist">
         <li *ngFor="let tab of hiringTabs; index as i">
-            <a class="nav-link rounded-0" [ngClass]="{'active':i===0}" data-toggle="tab" href="#{{tab.slug}}"
-                role="tab">{{tab.label}} <i class="ml-2" nz-icon nzType="right"></i></a>
+            <a class="nav-link rounded-0" [routerLink]="tab.slug" routerLinkActive="active">{{tab.label}} <i
+                    class="ml-2" nz-icon nzType="right"></i></a>
         </li>
     </ul>
-    <div class="tab-content" id="myTabContent">
-        <div *ngFor="let tab of hiringTabs; index as i" class="tab-pane fade" [ngClass]="{'active show':i===0}"
-            id="{{tab.slug}}" role="tabpanel">
-            <ng-container [ngSwitch]="true">
-                <ng-container *ngSwitchCase="tab.slug === 'resume-screens' || tab.slug === 'telephonic-screens' || tab.slug === 'interviews'">
-                    <candidate [tab]="tab.slug"></candidate>
-                </ng-container>
-                <ng-container *ngSwitchDefault>
-                    <table-list [columns]="tab.slug"></table-list>
-                </ng-container>
-            </ng-container>
-        </div>
-    </div>
+    <router-outlet></router-outlet>
 </div>

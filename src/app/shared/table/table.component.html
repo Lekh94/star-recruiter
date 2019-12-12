@@ -2,37 +2,34 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th *ngFor="let col of tableColumn">{{col.name}}</th>
-                <th *ngIf="tableHeader == 'candidates'"></th>
+                <th *ngFor="let col of tableColumns">{{col[0] === 'dropDown' ? '' : col[0]}}</th>
             </tr>
         </thead>
         <tbody class="bg-white">
             <tr *ngFor="let row of candidates">
-                <td *ngFor="let col of tableColumn">
-                    <label *ngIf="col.slug == 'name' && (tableHeader == 'candidates' || tableHeader == 'talentPool')"
-                        class="text-light-blue checkbox cursor-pointer"><input type="checkbox"><i
-                            class="mr-2 align-middle"></i>
-                        {{row[col.slug]}}
+                <td *ngFor="let col of tableColumns">
+                    <label *ngIf="col[1] === 'name' && nameWithCheckbox"
+                        class="text-light-blue checkbox cursor-pointer">
+                        <input type="checkbox"><i class="mr-2 align-middle"></i>
+                        {{row[col[1]]}}
                     </label>
-                    <span class="text-light-blue" *ngIf="col.slug == 'name' && (tableHeader != 'candidates' && tableHeader != 'talentPool' && tableHeader != 'reports')">
-                        {{row[col.slug]}}</span>
-                    <a *ngIf="col.slug == 'name' && tableHeader === 'reports'" [routerLink]="[row.id,'timeline']">{{row[col.slug]}}</a>
-                    <span *ngIf="col.slug != 'name'">
-                        {{col.slug === 'rating' ? '' : row[col.slug]}}
-                        <span *ngIf="col.slug === 'rating'">
-                            <i class="fa fa-star mr-1" *ngFor="let star of isRating(row[col.slug])"></i>
-                            <i class="fa fa-star-o mr-1" *ngFor="let star of emptyRating(row[col.slug])"></i>
-                        </span>
+                    <a (click)="activeCandidate(row.id)" *ngIf="col[1] === 'name' && !nameWithCheckbox" class="text-light-blue cursor-pointer">
+                        {{row[col[1]]}}
+                    </a>
+                    <span *ngIf="col[1] != 'name'">{{col[1] === 'rating' ? '' : row[col[1]]}}</span>
+                    <span *ngIf="col[1] === 'rating'">
+                        <i class="fa fa-star mr-1" *ngFor="let star of isRating(row[col[1]])"></i>
+                        <i class="fa fa-star-o mr-1" *ngFor="let star of emptyRating(row[col[1]])"></i>
                     </span>
-                </td>
-                <td class="dropdown" *ngIf="tableHeader == 'candidates'">
-                    <i class="cursor-pointer dropdown-toggle" data-toggle="dropdown" nz-icon nzType="more"></i>
-                    <div class="dropdown-menu dropdown-menu-right rounded-0 shadow border">
-                        <a class="dropdown-item" href="#">Rejected</a>
-                        <a class="dropdown-item" href="#">Move to Interview</a>
-                        <a class="dropdown-item" href="#">Move to Interview job</a>
-                        <a class="dropdown-item" href="#">Blacklist</a>
-                    </div>
+                    <span *ngIf="col[0] === 'dropDown'">
+                        <i class="cursor-pointer dropdown-toggle" data-toggle="dropdown" nz-icon nzType="more"></i>
+                        <div class="dropdown-menu dropdown-menu-right rounded-0 shadow border">
+                            <a class="dropdown-item" href="#">Rejected</a>
+                            <a class="dropdown-item" href="#">Move to Interview</a>
+                            <a class="dropdown-item" href="#">Move to Interview job</a>
+                            <a class="dropdown-item" href="#">Blacklist</a>
+                        </div>
+                    </span>
                 </td>
             </tr>
         </tbody>

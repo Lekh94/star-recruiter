@@ -1,0 +1,12 @@
+<h5 class="border-bottom p-3 d-flex">Talent Pool
+    <a href="" class="ml-auto btn theme-borderBtn rounded-0 bg-white">
+        <i nz-icon nzType="play-circle" class="align-middle"></i>
+        Start Hiring</a>
+</h5>
+<div class="container-fluid">
+    <div class="p-4">
+        <table-list [columns]="tableColumns" [checkbox]="nameWithCheckbox"></table-list>
+        <button (click)="addCandidate()" nz-button nzType="primary" class="font-semi-bold light-blue px-4 py-1 h-auto">
+            <i class="align-middle" nz-icon nzType="plus"></i> Add Candidate</button>
+    </div>
+</div>

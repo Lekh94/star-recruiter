@@ -1,0 +1,5 @@
+<table-list [columns]="tableColumns" [checkbox]="nameWithCheckbox"></table-list>
+candidateId--- {{id}}
+<div class="containet-fluid">
+    <candidate-profile (candidateId)="activeCandiate($event)" [activeTab]="activeSection"></candidate-profile>
+</div>

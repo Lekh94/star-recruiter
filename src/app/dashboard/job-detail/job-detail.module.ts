@@ -31,18 +31,6 @@ const route: Routes = [
                 loadChildren: () => import('./hiring/hiring.module').then(mod => mod.HiringModule)
             },
             {
-                path: 'reports',
-                loadChildren: () => import('./reports/reports.module').then(mod => mod.ReportsModule)
-            },
-            {
-                path: 'team',
-                loadChildren: () => import('./team/team.module').then(mod => mod.TeamModule)
-            },
-            {
-                path: 'candidates',
-                loadChildren: () => import('./candidates/candidates.module').then(mod => mod.CandidatesModule)
-            },
-            {
                 path: 'import',
                 loadChildren: () => import('./import/import.module').then(mod => mod.ImportFileModule)
             },

@@ -1,24 +1,28 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ReportListComponent } from './report-list.component';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { CandidatesComponent } from './candidates.component';
 
 
 const route: Routes = [
     {
         path: '',
-        component: ReportListComponent        
+        component: CandidatesComponent
     }
 ]
 
 @NgModule({
     imports: [
         CommonModule,
+        SharedModule,
         RouterModule.forChild(route),
-        SharedModule
+        NzIconModule,
     ],
-    declarations: [ReportListComponent]
+    declarations: [
+        CandidatesComponent
+    ]
 })
 
-export class ReportsListModule { }
+export class CandidatesModule { }

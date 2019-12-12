@@ -5,11 +5,11 @@ export const hiringTabs = [
     },
     {
         label: 'Resume Screens',
-        slug: 'resume-screens'
+        slug: 'resumes'
     },
     {
         label: 'Telephonic Screens',
-        slug: 'telephonic-screens'
+        slug: 'telephonic'
     },
     {
         label: 'Interviews',
@@ -21,7 +21,7 @@ export const hiringTabs = [
     },
     {
         label: 'Decline',
-        slug: 'decline'
+        slug: 'declines'
     },
     {
         label: 'Rejected',

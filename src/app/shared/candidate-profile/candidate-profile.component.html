@@ -1,161 +1,199 @@
-<ng-container [ngSwitch]="true">
-    <ng-container *ngSwitchCase="activeTab === 'resume-screens'">
-        <h6 class="theme-color d-flex m-0 align-items-center">Abhishek Gautam
-            <div class="action-buttons ml-auto">
-                <i nz-icon nzType="mail" class="align-middle theme-color cursor-pointer"></i>
-                <i nz-icon nzType="edit" class="align-middle theme-color cursor-pointer mx-2"></i>
-                <i nz-icon nzType="printer" class="align-middle theme-color cursor-pointer"></i>
-            </div>
-        </h6>
-        <div class="row mt-2">
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Location: <small>Gurgaon</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Experience: <small>3 Years</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Current Salary: <small>6 LPA</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">
-                    <i class="align-middle mr-1 fa fa-star"></i>
-                    <i class="align-middle mr-1 fa fa-star"></i>
-                    <i class="align-middle mr-1 fa fa-star"></i>
-                    <i class="align-middle mr-1 fa fa-star-o mr-1"></i>
-                    <i class="align-middle mr-1 fa fa-star-o mr-1"></i>
-                </p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Notice period: <small>1 Month</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Email: <small>abhi@abcd.com</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Phone: <small>9876543210</small></p>
-            </div>
-            <div class="col-md-12">
-                <p class="font-semi-bold m-0 mt-3 skills">Skill:
-                    <small>Angular</small>
-                    <small>Stack</small>
-                    <small>Frontend Developer</small>
-                    <small>Android</small>
-                    <small>Java</small>
-                </p>
-            </div>
-        </div>
-    </ng-container>
-    <ng-container *ngSwitchCase="activeTab === 'telephonic-screens'">
-        <h6 class="theme-color d-flex m-0 align-items-center">Abhishek Gautam
-            <div class="action-buttons ml-auto">
-                <i nz-icon nzType="mail" class="align-middle theme-color cursor-pointer mr-2"></i>
-                <i nz-icon nzType="printer" class="align-middle theme-color cursor-pointer"></i>
-            </div>
-        </h6>
-        <div class="form-row mt-2">
-            <div class="col">
-                <p class="font-semi-bold m-0">Location: <small>Gurgaon</small></p>
-            </div>
-            <div class="col">
-                <p class="font-semi-bold m-0">Phone: <small>9876543210</small></p>
-            </div>
-            <div class="col">
-                <p class="font-semi-bold m-0">Email: <small>abhi@abc.com</small></p>
-            </div>
-            <div class="col">
-                <p class="font-semi-bold m-0">
-                    <i class="align-middle mr-1 fa fa-star"></i>
-                    <i class="align-middle mr-1 fa fa-star"></i>
-                    <i class="align-middle mr-1 fa fa-star"></i>
-                    <i class="align-middle mr-1 fa fa-star-o mr-1"></i>
-                    <i class="align-middle mr-1 fa fa-star-o mr-1"></i>
-                </p>
-            </div>
-            <div class="col"></div>
-            <div class="col-md-12">
-                <div class="form-row align-items-end my-3">
-                    <div class="col">
-                        <label class="font-semi-bold">Notice period</label>
-                        <input type="text" value="1 Month" class="form-control">
-                    </div>
-                    <div class="col">
-                        <label class="font-semi-bold">Experince</label>
-                        <input type="text" value="3 Years" class="form-control">
-                    </div>
-                    <div class="col">
-                        <label class="font-semi-bold">Current Salary</label>
-                        <input type="text" value="6 LPA" class="form-control">
-                    </div>
-                    <div class="col">
-                        <label class="font-semi-bold">Expected Salary</label>
-                        <input type="text" value="6 LPA" class="form-control">
-                    </div>
-                    <div class="col">
-                        <button nz-button nzType="primary" class="font-semi-bold light-blue py-1px h-auto px-3">
-                            Update</button>
-                    </div>
+<div class="row">
+    <div class="col-md-8 pr-0">
+        <div class="px-3 pt-3 pb-0 bg-white">
+            <h6 class="theme-color d-flex m-0 align-items-center">Abhishek Gautam
+                <div class="action-buttons ml-auto">
+                    <i nz-icon nzType="mail" class="align-middle theme-color cursor-pointer"></i>
+                    <i nz-icon nzType="edit" class="align-middle theme-color cursor-pointer mx-2"></i>
+                    <i nz-icon nzType="printer" class="align-middle theme-color cursor-pointer"></i>
+                </div>
+            </h6>
+            <div class="row mt-2">
+                <div class="col-md-3">
+                    <p class="font-semi-bold m-0">Location: <small>Gurgaon</small></p>
+                </div>
+                <div class="col-md-3">
+                    <p class="font-semi-bold m-0">Experience: <small>3 Years</small></p>
+                </div>
+                <div class="col-md-3">
+                    <p class="font-semi-bold m-0">Current Salary: <small>6 LPA</small></p>
+                </div>
+                <div class="col-md-3">
+                    <p class="font-semi-bold m-0">Expected Salary: <small>6 LPA</small></p>
+                </div>
+                <div class="col-md-3">
+                    <p class="font-semi-bold m-0">Notice period: <small>1 Month</small></p>
+                </div>
+                <div class="col-md-3">
+                    <p class="font-semi-bold m-0">Email: <small>abhi@abcd.com</small></p>
+                </div>
+                <div class="col-md-3">
+                    <p class="font-semi-bold m-0">Phone: <small>9876543210</small></p>
+                </div>
+                <div class="col-md-3">
+                    <p class="font-semi-bold m-0">
+                        <i class="align-middle mr-1 fa fa-star"></i>
+                        <i class="align-middle mr-1 fa fa-star"></i>
+                        <i class="align-middle mr-1 fa fa-star"></i>
+                        <i class="align-middle mr-1 fa fa-star-o mr-1"></i>
+                        <i class="align-middle mr-1 fa fa-star-o mr-1"></i>
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <p class="font-semi-bold m-0 mt-3 skills">Skill:
+                        <small>Angular</small>
+                        <small>Stack</small>
+                        <small>Frontend Developer</small>
+                        <small>Android</small>
+                        <small>Java</small>
+                    </p>
                 </div>
             </div>
-            <div class="col-md-12">
-                <p class="font-semi-bold m-0 mt-3 skills">Skill:
-                    <small>Angular</small>
-                    <small>Stack</small>
-                    <small>Frontend Developer</small>
-                    <small>Android</small>
-                    <small>Java</small>
-                </p>
+            <ul class="nav nav-tabs border-0 m-0 mt-3" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab"
+                        aria-selected="true">Timeline</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#resume" role="tab">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#notes" role="tab">Notes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content bg-white p-3 border-top theme-border" id="myTabContent">
+            <div class="tab-pane fade show active" id="timeline" role="tabpanel">
+                <timeline></timeline>
+            </div>
+            <div class="tab-pane fade" id="resume" role="tabpanel">
+                <div class="p-5 text-center mx-auto w-75">
+                    <i nz-icon nzType="file-text" class="align-middle d-block h1 mb-3 theme-color"></i>
+                    <button nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
+                        Load Resume</button>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="notes" role="tabpanel">
+                <notes></notes>
             </div>
         </div>
-    </ng-container>
-    <ng-container *ngSwitchCase="activeTab === 'interviews'">
-        <h6 class="theme-color d-flex m-0 align-items-center">Abhishek Gautam
-            <div class="action-buttons ml-auto">
-                <i nz-icon nzType="mail" class="align-middle theme-color cursor-pointer"></i>
-                <i nz-icon nzType="edit" class="align-middle theme-color cursor-pointer mx-2"></i>
-                <i nz-icon nzType="printer" class="align-middle theme-color cursor-pointer"></i>
-            </div>
-        </h6>
-        <div class="row mt-2">
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Location: <small>Gurgaon</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Experience: <small>3 Years</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Current Salary: <small>6 LPA</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Expected Salary: <small>6 LPA</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Notice period: <small>1 Month</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Email: <small>abhi@abcd.com</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">Phone: <small>9876543210</small></p>
-            </div>
-            <div class="col-md-3">
-                <p class="font-semi-bold m-0">
-                    <i class="align-middle mr-1 fa fa-star"></i>
-                    <i class="align-middle mr-1 fa fa-star"></i>
-                    <i class="align-middle mr-1 fa fa-star"></i>
-                    <i class="align-middle mr-1 fa fa-star-o mr-1"></i>
-                    <i class="align-middle mr-1 fa fa-star-o mr-1"></i>
-                </p>
-            </div>
-            <div class="col-md-12">
-                <p class="font-semi-bold m-0 mt-3 skills">Skill:
-                    <small>Angular</small>
-                    <small>Stack</small>
-                    <small>Frontend Developer</small>
-                    <small>Android</small>
-                    <small>Java</small>
-                </p>
-            </div>
+    </div>
+    <div class="col-md-4 sidebar p-3 border theme-border">
+        <div class="h-100">
+            <ng-container [ngSwitch]="true">
+                <ng-container *ngSwitchCase="activeTab === 'resume-screens'">
+                    <h6 class="section-title theme-color">Scheduled next Steps</h6>
+                    <div class="form-group">
+                        <label class="radioButton cursor-pointer font-semi-bold"><input type="radio" name="interview"
+                                class="d-none"><i></i> Face to face
+                            interview</label>
+                        <input type="text" class="form-control" placeholder="Date & Time">
+                    </div>
+                    <div class="form-group">
+                        <label class="radioButton cursor-pointer font-semi-bold"><input type="radio" name="interview"
+                                class="d-none"><i></i> Telephonic
+                            interview</label>
+                        <input type="text" class="form-control" placeholder="Date & Time">
+                    </div>
+                    <h6 class="section-title theme-color pt-3">Reject Candidate</h6>
+                    <div class="form-group">
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Not
+                            Reachable</label>
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Not looking
+                            for job change</label>
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Out of
+                            budget</label>
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Not
+                            Intrested</label>
+                    </div>
+                    <h6 class="section-title theme-color pt-3">Note</h6>
+                    <div class="form-group">
+                        <textarea class="form-control"></textarea>
+                    </div>
+                    <button nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
+                        Save & Next</button>
+                </ng-container>
+                <ng-container *ngSwitchCase="activeTab === 'telephonic-screens'">
+                    <h6 class="section-title theme-color">Scheduled interview</h6>
+                    <div class="form-group">
+                        <label class="radioButton cursor-pointer font-semi-bold"><input type="radio" name="interview"
+                                class="d-none"><i></i> Face to face
+                            interview</label>
+                        <input type="text" class="form-control" placeholder="Date & Time">
+                    </div>
+                    <div class="form-group">
+                        <label class="radioButton cursor-pointer font-semi-bold"><input type="radio" name="interview"
+                                class="d-none"><i></i> Telephonic interview</label>
+                        <input type="text" class="form-control" placeholder="Date & Time">
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox cursor-pointer"><input type="checkbox"><i
+                                class="bg-white align-middle mr-1"></i> Notify Candidate</label>
+                    </div>
+                    <h6 class="section-title theme-color pt-3">Reject Candidate</h6>
+                    <div class="form-group">
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Not
+                            Interested</label>
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Not looking
+                            for job change</label>
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Out of
+                            budget</label>
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Location is not suitable</label>
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Already Interviewed</label>
+                    </div>
+                    <h6 class="section-title theme-color pt-3">Visit later</h6>
+                    <div class="form-group">
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="visit" class="d-none"><i></i> Phone not reachable</label>
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="visit" class="d-none"><i></i> Call later</label>
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="visit" class="d-none"><i></i> Wrong number</label>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox cursor-pointer"><input type="checkbox"><i
+                                class="bg-white align-middle mr-1"></i> Notify Candidate</label>
+                    </div>
+                    <button nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
+                        Save & Next</button>
+                </ng-container>
+                <ng-container *ngSwitchCase="activeTab === 'interviews'">
+                    <h6 class="section-title theme-color">Reject Candidate</h6>
+                    <div class="form-group">
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Poor Skills</label>
+                        <label class="radioButton cursor-pointer font-semi-bold mb-2 d-block position-relative"><input
+                                type="radio" name="reject" class="d-none"><i></i> Poor Attitude</label>
+                    </div>
+                    <h6 class="section-title theme-color pt-3">Reject Reason</h6>
+                    <div class="form-group">
+                        <textarea class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox cursor-pointer"><input type="checkbox"><i
+                                class="bg-white align-middle mr-1"></i> Notify Candidate</label>
+                    </div>
+                    <div class="form-group mb-5">
+                        <label>Select time to send the Rejection email.</label>
+                        <select class="form-control"></select>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox cursor-pointer"><input type="checkbox"><i
+                                class="bg-white align-middle mr-1"></i> Move to next round</label>
+                    </div>
+                    <button nz-button nzType="primary" class="font-semi-bold light-blue py-1 h-auto px-3">
+                        Finish Interview</button>
+                </ng-container>
+            </ng-container>
         </div>
-    </ng-container>
-</ng-container>
+    </div>
+</div>

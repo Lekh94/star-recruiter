@@ -16,14 +16,7 @@ export class SignUpComponent implements OnInit {
         private route: Router) {
         this.myForm = this.fb.group({
             companyName: ['', Validators.required],
-            registeredName: ['', Validators.required],
-            companyEmail: ['', Validators.required],
-            companyPhone: ['', Validators.required],
-            address: ['', Validators.required],
-            landmark: ['', Validators.required],
-            city: ['', Validators.required],
-            state: ['', Validators.required],
-            zipCode: ['', Validators.required],
+            country: ['', Validators.required],
             firstName: ['', Validators.required],
             lastName: [''],
             email: ['', Validators.required],

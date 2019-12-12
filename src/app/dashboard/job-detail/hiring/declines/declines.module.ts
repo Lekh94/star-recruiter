@@ -1,24 +1,28 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ReportTimelineComponent } from './reports-timeline.component';
+import { DeclinesComponent } from './declines.component';
 
 
 const route: Routes = [
     {
         path: '',
-        component: ReportTimelineComponent        
+        component: DeclinesComponent
     }
 ]
 
 @NgModule({
     imports: [
         CommonModule,
+        SharedModule,
         RouterModule.forChild(route),
-        SharedModule
+        NzIconModule,
     ],
-    declarations: [ReportTimelineComponent]
+    declarations: [
+        DeclinesComponent
+    ]
 })
 
-export class ReportsTimelineModule { }
+export class DeclinesModule { }

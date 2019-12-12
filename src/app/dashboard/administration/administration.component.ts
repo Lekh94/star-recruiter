@@ -14,9 +14,9 @@ export class AdministrationComponent implements OnInit {
         this.sidebarNavs = [
             { label: 'Overview', link: '/administration/overview' },
             { label: 'Jobs', link: '/administration/jobs' },
-            { label: 'Users & Roles', link: '/administration/users-roles' },
+            // { label: 'Users & Roles', link: '/administration/users-roles' },
             { label: 'Customizations', link: '/administration/customizations' },
-            { label: 'Settings', link: '/administration/settings' }
+            // { label: 'Settings', link: '/administration/settings' }
         ]
     }
 

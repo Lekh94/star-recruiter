@@ -44,10 +44,8 @@ export class AddCandidateComponent implements OnInit {
     }
 
     candidatesList() {
-        // this.isLoading = true;
-        // let url = this.router.url.replace('add', 'all');
-        // this.router.navigateByUrl(url);
-        console.log('this.candidateForm', this.candidateForm.value)
+        let url = this.router.url.replace('/add', '');
+        this.router.navigateByUrl(url);
     }
 
     preventDefault(event) {

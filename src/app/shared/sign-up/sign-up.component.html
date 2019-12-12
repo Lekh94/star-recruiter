@@ -12,7 +12,7 @@
             <form id="loginForm" [formGroup]="myForm" class="login-form" autocomplete="off">
                 <h6 class="text-left">Company Details</h6>
                 <div class="form-row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group position-relative">
                             <input nz-input type="text" formControlName="companyName"
                                 class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
@@ -25,113 +25,11 @@
                                 required</div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group position-relative">
-                            <input nz-input type="text" formControlName="registeredName"
+                            <input nz-input type="text" formControlName="country"
                                 class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
-                            <label class="position-absolute">Registered Name</label>
-                            <div *ngIf="myForm.controls.registeredName.touched && myForm.controls.registeredName.invalid"
-                                class="error-msg mt-1">
-                                <i nz-icon nzType="close-circle" nzTheme="outline" class="align-middle mr-1"></i>
-                                Company's Registered Name
-                                is
-                                required</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-6">
-                        <div class="form-group position-relative">
-                            <input nz-input type="email" formControlName="companyEmail"
-                                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                                class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
-                            <label class="position-absolute">Company Email</label>
-                            <div *ngIf="myForm.controls.companyEmail.touched && myForm.controls.companyEmail.invalid"
-                                class="error-msg mt-1">
-                                <i nz-icon nzType="close-circle" nzTheme="outline"
-                                    class="align-middle mr-1"></i>Company's Email
-                                is
-                                required</div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group position-relative">
-                            <input nz-input type="text" formControlName="companyPhone"
-                                class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
-                            <label class="position-absolute">Company Phone</label>
-                            <div *ngIf="myForm.controls.companyPhone.touched && myForm.controls.companyPhone.invalid"
-                                class="error-msg mt-1">
-                                <i nz-icon nzType="close-circle" nzTheme="outline"
-                                    class="align-middle mr-1"></i>Company's Phone
-                                is
-                                required</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-6">
-                        <div class="form-group position-relative">
-                            <input nz-input type="text" formControlName="address"
-                                class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
-                            <label class="position-absolute">Address</label>
-                            <div *ngIf="myForm.controls.address.touched && myForm.controls.address.invalid"
-                                class="error-msg mt-1">
-                                <i nz-icon nzType="close-circle" nzTheme="outline" class="align-middle mr-1"></i>
-                                Address
-                                is
-                                required</div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group position-relative">
-                            <input nz-input type="text" formControlName="landmark"
-                                class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
-                            <label class="position-absolute">Landmark</label>
-                            <div *ngIf="myForm.controls.landmark.touched && myForm.controls.landmark.invalid"
-                                class="error-msg mt-1">
-                                <i nz-icon nzType="close-circle" nzTheme="outline" class="align-middle mr-1"></i>
-                                Landmark
-                                is
-                                required</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-4">
-                        <div class="form-group position-relative">
-                            <input nz-input type="text" formControlName="city"
-                                class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
-                            <label class="position-absolute">City</label>
-                            <div *ngIf="myForm.controls.city.touched && myForm.controls.city.invalid"
-                                class="error-msg mt-1">
-                                <i nz-icon nzType="close-circle" nzTheme="outline" class="align-middle mr-1"></i> City
-                                is
-                                required</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group position-relative">
-                            <input nz-input type="text" formControlName="state"
-                                class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
-                            <label class="position-absolute">State</label>
-                            <div *ngIf="myForm.controls.state.touched && myForm.controls.state.invalid"
-                                class="error-msg mt-1">
-                                <i nz-icon nzType="close-circle" nzTheme="outline" class="align-middle mr-1"></i> State
-                                is
-                                required</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group position-relative">
-                            <input nz-input type="text" formControlName="zipCode"
-                                class="pl-0 bg-transparent form-control rounded-0 border-0 border-bottom" />
-                            <label class="position-absolute">Zip Code</label>
-                            <div *ngIf="myForm.controls.zipCode.touched && myForm.controls.zipCode.invalid"
-                                class="error-msg mt-1">
-                                <i nz-icon nzType="close-circle" nzTheme="outline" class="align-middle mr-1"></i> Zip
-                                Code
-                                is
-                                required</div>
+                            <label class="position-absolute">Country</label>
                         </div>
                     </div>
                 </div>
